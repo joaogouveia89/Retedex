@@ -1,6 +1,10 @@
 package io.github.joaogouveia89.retedex.core.data.remote.model
 
+import com.google.gson.annotations.SerializedName
+
 data class GenerationVii(
+    @SerializedName("icons")
     val icons: Icons,
-    val ultra-sun-ultra-moon: UltraSunUltraMoon
+    @SerializedName("ultra-sun-ultra-moon")
+    val ultraSunUltraMoon: UltraSunUltraMoon
 )
