@@ -11,7 +11,7 @@ import javax.inject.Inject
 
 class PokemonRepositoryImpl @Inject constructor(
     private val remoteDataSource: PokemonDataSource
-): PokemonRepository {
+) : PokemonRepository {
     override fun getPokemons(pagingConfig: PagingConfig): Flow<PagingData<Pokemon>> =
         Pager(
             config = pagingConfig,

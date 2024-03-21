@@ -10,7 +10,7 @@ import java.io.IOException
 
 class PokemonPagingSource(
     private val remoteDataSource: PokemonDataSource
-): PagingSource<Int, Pokemon>() {
+) : PagingSource<Int, Pokemon>() {
     override fun getRefreshKey(state: PagingState<Int, Pokemon>): Int? =
         state.anchorPosition?.let { anchorPosition ->
             val anchorPage = state.closestPageToPosition(anchorPosition)
@@ -40,7 +40,7 @@ class PokemonPagingSource(
         }
     }
 
-    companion object{
+    companion object {
         private const val LIMIT = 151
     }
 

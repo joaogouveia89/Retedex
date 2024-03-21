@@ -10,7 +10,7 @@ import javax.inject.Inject
 
 class GetPokemonsUseCaseImpl @Inject constructor(
     private val repository: PokemonRepository
-): GetPokemonsUseCase {
+) : GetPokemonsUseCase {
     override fun invoke(): Flow<PagingData<Pokemon>> =
         repository.getPokemons(
             pagingConfig = PagingConfig(

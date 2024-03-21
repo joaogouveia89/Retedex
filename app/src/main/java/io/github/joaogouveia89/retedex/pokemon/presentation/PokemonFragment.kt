@@ -5,17 +5,14 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.paging.PagingData
-import androidx.paging.map
 import dagger.hilt.android.AndroidEntryPoint
 import io.github.joaogouveia89.retedex.core.domain.model.Pokemon
 import io.github.joaogouveia89.retedex.databinding.FragmentHomeBinding
 import kotlinx.coroutines.launch
-import timber.log.Timber
 
 @AndroidEntryPoint
 class PokemonFragment : Fragment() {

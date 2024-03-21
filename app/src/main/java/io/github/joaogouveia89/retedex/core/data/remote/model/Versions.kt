@@ -1,14 +1,6 @@
 package io.github.joaogouveia89.retedex.core.data.remote.model
 
 import com.google.gson.annotations.SerializedName
-import io.github.joaogouveia89.retedex.core.data.remote.model.GenerationI
-import io.github.joaogouveia89.retedex.core.data.remote.model.GenerationIi
-import io.github.joaogouveia89.retedex.core.data.remote.model.GenerationIii
-import io.github.joaogouveia89.retedex.core.data.remote.model.GenerationIv
-import io.github.joaogouveia89.retedex.core.data.remote.model.GenerationV
-import io.github.joaogouveia89.retedex.core.data.remote.model.GenerationVi
-import io.github.joaogouveia89.retedex.core.data.remote.model.GenerationVii
-import io.github.joaogouveia89.retedex.core.data.remote.model.GenerationViii
 
 data class Versions(
     @SerializedName("generation-i:")

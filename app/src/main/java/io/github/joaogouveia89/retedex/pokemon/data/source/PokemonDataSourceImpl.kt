@@ -8,10 +8,11 @@ import javax.inject.Inject
 
 class PokemonDataSourceImpl @Inject constructor(
     private val service: PokemonService
-): PokemonDataSource {
+) : PokemonDataSource {
 
     override fun getPokemonPagingSource(): PokemonPagingSource =
         PokemonPagingSource(this)
+
     override suspend fun getPokemonList(offset: Int, limit: Int): PokemonResponse =
         service.getPokemons(
             offset = offset,
