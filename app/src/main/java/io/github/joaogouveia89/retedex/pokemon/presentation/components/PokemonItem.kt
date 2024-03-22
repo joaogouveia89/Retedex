@@ -1,6 +1,7 @@
 package io.github.joaogouveia89.retedex.pokemon.presentation.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -23,6 +24,7 @@ fun PokemonItem(
     modifier: Modifier = Modifier,
     index: Int,
     name: String,
+    onClick: (pokemonId: Int) -> Unit
 ) {
     Box(
         modifier = modifier
@@ -31,7 +33,10 @@ fun PokemonItem(
         Card(
             modifier = modifier
                 .fillMaxWidth()
-                .padding(6.dp),
+                .padding(6.dp)
+                .clickable {
+                    onClick(index)
+                },
             shape = RoundedCornerShape(8.dp),
             elevation = 8.dp
         ) {
@@ -56,6 +61,7 @@ fun PokemonItem(
 fun PokemonItemPreview() {
     PokemonItem(
         index = 4,
-        name = "Charmander"
+        name = "Charmander",
+        onClick = {}
     )
 }

@@ -18,7 +18,7 @@ fun PokemonContent(
     modifier: Modifier = Modifier,
     pagingPokemons: LazyPagingItems<Pokemon>,
     paddingValues: PaddingValues,
-    onClick: (movieId: Int) -> Unit
+    onClick: (pokemonId: Int) -> Unit
 ) {
     Box(
         modifier = modifier.background(BlueSecondary)
@@ -33,7 +33,8 @@ fun PokemonContent(
                 pokemonNullable?.let { pokemon ->
                     PokemonItem(
                         name = pokemon.name,
-                        index = index + 1
+                        index = index + 1,
+                        onClick = onClick
                     )
                 }
             }

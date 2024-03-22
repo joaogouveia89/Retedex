@@ -7,6 +7,7 @@ import io.github.joaogouveia89.retedex.R
 import io.github.joaogouveia89.retedex.core.presentation.common.RetedexAppBar
 import io.github.joaogouveia89.retedex.pokemon.presentation.components.PokemonContent
 import io.github.joaogouveia89.retedex.pokemon.presentation.state.PokemonsState
+import timber.log.Timber
 
 @Composable
 fun PokemonScreen(
@@ -25,7 +26,8 @@ fun PokemonScreen(
         PokemonContent(
             pagingPokemons = pokemons,
             paddingValues = paddingValues,
-            onClick = { movieId ->
+            onClick = { pokemonIndex ->
+                Timber.i("PokemonIndex = $pokemonIndex")
 //                UtilFunctions.logInfo("MOVIE_ID", movieId.toString())
 //                navigateToDetailMovie(movieId)
             }
