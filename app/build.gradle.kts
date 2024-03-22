@@ -37,7 +37,6 @@ android {
     }
     buildFeatures {
         buildConfig = true
-        viewBinding = true
         compose = true
     }
 
@@ -56,13 +55,16 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
-    implementation(libs.androidx.navigation.fragment.ktx)
-    implementation(libs.androidx.navigation.ui.ktx)
+
+    // Splashscreen
+    implementation(libs.androidx.core.splashscreen)
 
     //Compose
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.ui)
     implementation(libs.androidx.material)
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.lifecycle.runtime.compose)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material.icons.extended)
 
@@ -72,12 +74,18 @@ dependencies {
 
     // Dependency injection - Hilt
     implementation(libs.hilt.android)
+    implementation(libs.androidx.hilt.navigation.compose)
     kapt(libs.hilt.compiler)
     kapt(libs.androidx.hilt.compiler)
 
     // Coroutines
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.coroutines.android)
+
+    // Coroutine Lifecycle Scopes
+    implementation(libs.androidx.lifecycle.viewmodel.ktx.v261)
+    implementation(libs.androidx.lifecycle.runtime.ktx.v261)
+    implementation(libs.kotlinx.coroutines.core.v164)
 
     // Coil
     implementation(libs.coil.compose)
@@ -96,7 +104,11 @@ dependencies {
 
     // Room - Local database
     implementation(libs.androidx.room.ktx)
+    implementation(libs.androidx.room.runtime)
     kapt(libs.androidx.room.compiler)
+
+    //Javax Inject
+    implementation(libs.javax.inject)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
