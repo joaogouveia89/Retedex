@@ -15,7 +15,11 @@ fun NavigationGraph(navController: NavHostController) {
     ) {
         composable(BottomNavItem.Pokemon.route) {
             val viewModel: PokemonViewModel = hiltViewModel()
-            PokemonScreen()
+            val uiState = viewModel.uiState
+            PokemonScreen(
+                uiState = uiState,
+                navigateToDetailPokemon = {}
+            )
             /*val uiState = viewModel.uiState
 
             MoviePopularScreen(
