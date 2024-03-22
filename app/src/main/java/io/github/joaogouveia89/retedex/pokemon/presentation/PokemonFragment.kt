@@ -1,7 +1,6 @@
 package io.github.joaogouveia89.retedex.pokemon.presentation
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,13 +10,14 @@ import androidx.lifecycle.lifecycleScope
 import androidx.paging.PagingData
 import dagger.hilt.android.AndroidEntryPoint
 import io.github.joaogouveia89.retedex.core.domain.model.Pokemon
-import io.github.joaogouveia89.retedex.databinding.FragmentHomeBinding
+import io.github.joaogouveia89.retedex.databinding.FragmentPokemonBinding
+import io.github.joaogouveia89.retedex.ui.theme.RetedexTheme
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class PokemonFragment : Fragment() {
 
-    private var _binding: FragmentHomeBinding? = null
+    private var _binding: FragmentPokemonBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -32,14 +32,21 @@ class PokemonFragment : Fragment() {
     ): View {
 
 
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        _binding = FragmentPokemonBinding.inflate(inflater, container, false)
 
-        return root
+        binding.container.setContent {
+            RetedexTheme{
+                PokemonScreen()
+            }
+        }
+
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+
 
         lifecycleScope.launch {
             // Inputs
@@ -50,7 +57,6 @@ class PokemonFragment : Fragment() {
             // Outputs
             launch {
                 viewModel.pokemonsState.collect {
-                    Log.i("JOAODEBUG", "COLLECTED")
                     val list: PagingData<Pokemon> = it.pokemons
                 }
             }
