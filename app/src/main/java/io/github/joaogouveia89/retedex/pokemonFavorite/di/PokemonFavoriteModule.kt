@@ -8,9 +8,11 @@ import io.github.joaogouveia89.retedex.core.data.local.daos.PokemonDao
 import io.github.joaogouveia89.retedex.pokemonFavorite.data.repository.PokemonFavoriteRepositoryImpl
 import io.github.joaogouveia89.retedex.pokemonFavorite.data.source.PokemonFavoriteLocalDataSourceImpl
 import io.github.joaogouveia89.retedex.pokemonFavorite.data.usecase.AddPokemonFavoriteUseCaseImpl
+import io.github.joaogouveia89.retedex.pokemonFavorite.data.usecase.DeletePokemonFavoriteUseCaseImpl
 import io.github.joaogouveia89.retedex.pokemonFavorite.domain.repository.PokemonFavoriteRepository
 import io.github.joaogouveia89.retedex.pokemonFavorite.domain.source.PokemonFavoriteLocalDataSource
 import io.github.joaogouveia89.retedex.pokemonFavorite.domain.usecase.AddPokemonFavoriteUseCase
+import io.github.joaogouveia89.retedex.pokemonFavorite.domain.usecase.DeletePokemonFavoriteUseCase
 import javax.inject.Singleton
 
 @Module
@@ -30,4 +32,9 @@ object PokemonFavoriteModule {
     @Singleton
     fun provideAddPokemonFavoriteUseCase(repository: PokemonFavoriteRepository): AddPokemonFavoriteUseCase =
         AddPokemonFavoriteUseCaseImpl(repository = repository)
+
+    @Provides
+    @Singleton
+    fun provideDeletePokemonFavoriteUseCase(repository: PokemonFavoriteRepository): DeletePokemonFavoriteUseCase =
+        DeletePokemonFavoriteUseCaseImpl(repository = repository)
 }
