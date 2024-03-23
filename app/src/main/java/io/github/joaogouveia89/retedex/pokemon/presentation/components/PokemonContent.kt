@@ -32,8 +32,7 @@ fun PokemonContent(
 
                 pokemonNullable?.let { pokemon ->
                     PokemonItem(
-                        name = pokemon.name,
-                        index = index + 1,
+                        pokemon = pokemon,
                         onClick = onClick
                     )
                 }
