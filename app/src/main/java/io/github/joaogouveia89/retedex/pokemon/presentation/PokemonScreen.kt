@@ -28,8 +28,7 @@ fun PokemonScreen(
             paddingValues = paddingValues,
             onClick = { pokemonIndex ->
                 Timber.i("PokemonIndex = $pokemonIndex")
-//                UtilFunctions.logInfo("MOVIE_ID", movieId.toString())
-//                navigateToDetailMovie(movieId)
+                navigateToDetailPokemon(pokemonIndex)
             }
         )
     }

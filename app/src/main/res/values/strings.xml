@@ -5,4 +5,9 @@
     <string name="title_notifications">Notifications</string>
     <string name="favorites">Favorites\n</string>
     <string name="pokemon">Pokemons</string>
+    <string name="pokemon_details">Pokemon Details</string>
+    <string name="pokemon_details_height">Height: %.2f m</string>
+    <string name="pokemon_details_weight">Weight: %d g</string>
+    <string name="abilities">Abilities:</string>
+    <string name="moves">"Moves: "</string>
 </resources>
