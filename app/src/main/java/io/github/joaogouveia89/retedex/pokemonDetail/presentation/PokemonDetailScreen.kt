@@ -113,9 +113,22 @@ fun PokemonDetailScreen(
                 )
             }
 
+            item{
+                Text(
+                    modifier = Modifier
+                        .padding(8.dp),
+                    text = stringResource(id = R.string.base_xp, pokemonDetails.baseXp),
+                    color = black,
+                    fontFamily = FontFamily.SansSerif,
+                    fontWeight = FontWeight.Medium,
+                    fontSize = 18.sp
+                )
+            }
+
             item {
                 Row(
-                    modifier = Modifier.fillMaxWidth()
+                    modifier = Modifier
+                        .fillMaxWidth()
                         .padding(bottom = 12.dp)
                 ) {
                     Text(
@@ -143,8 +156,6 @@ fun PokemonDetailScreen(
                     }
                 }
             }
-            
-
 
             statsStringList(
                 lazyListScope = this,

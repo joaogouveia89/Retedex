@@ -16,5 +16,6 @@ fun PokemonDetailResponse.asPokemonDetail() =
         weightInGrams = this.weight * 100, //api returns the weight in hectograms, and 1 hg = 100 g
         heightInMeters = this.height / 10.0, //api returns the height in decimeters, and 1 dc = 0.1 m
         abilities = this.abilities.map { it.ability.name.capitalizeFirst() },
-        moves = this.moves.map { it.move.name.capitalizeFirst() }
+        moves = this.moves.map { it.move.name.capitalizeFirst() },
+        baseXp = this.baseExperience
     )
