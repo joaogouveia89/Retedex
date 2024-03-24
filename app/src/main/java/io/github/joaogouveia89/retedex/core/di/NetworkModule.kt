@@ -43,7 +43,7 @@ object NetworkModule {
 
 
     @Provides
-    fun provideMovieService(
+    fun providePokemonService(
         client: OkHttpClient,
         converterFactory: GsonConverterFactory
     ): PokemonService =

@@ -15,9 +15,6 @@ import io.github.joaogouveia89.retedex.core.presentation.navigation.NavigationGr
 fun MainScreen(navController: NavHostController) {
     Scaffold(
         bottomBar = {
-            /*if (currentRoute(navHostController = navController) != DetailScreenNav.DetailScreen.route) {
-                BottomNavigationBar(navController = navController)
-            }*/
             BottomNavigationBar(navController = navController)
         },
         content = { paddingValues ->

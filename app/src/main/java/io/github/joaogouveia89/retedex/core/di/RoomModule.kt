@@ -9,7 +9,7 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import io.github.joaogouveia89.retedex.core.data.local.PokemonDatabase
 import io.github.joaogouveia89.retedex.core.data.local.daos.PokemonDao
-import io.github.joaogouveia89.retedex.core.util.Constants.MOVIE_DATABASE_NAME
+import io.github.joaogouveia89.retedex.core.util.Constants.POKEMON_DATABASE_NAME
 import javax.inject.Singleton
 
 @Module
@@ -22,7 +22,7 @@ object RoomModule {
     ) = Room.databaseBuilder(
         context,
         PokemonDatabase::class.java,
-        MOVIE_DATABASE_NAME
+        POKEMON_DATABASE_NAME
     ).build()
 
     @Provides
