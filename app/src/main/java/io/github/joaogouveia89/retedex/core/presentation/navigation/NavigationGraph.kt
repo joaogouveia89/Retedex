@@ -1,5 +1,6 @@
 import androidx.compose.runtime.Composable
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
@@ -12,6 +13,8 @@ import io.github.joaogouveia89.retedex.pokemon.presentation.PokemonScreen
 import io.github.joaogouveia89.retedex.pokemon.presentation.PokemonViewModel
 import io.github.joaogouveia89.retedex.pokemonDetail.presentation.PokemonDetailScreen
 import io.github.joaogouveia89.retedex.pokemonDetail.presentation.PokemonDetailViewModel
+import io.github.joaogouveia89.retedex.pokemonFavorite.presentation.PokemonFavoritesScreen
+import io.github.joaogouveia89.retedex.pokemonFavorite.presentation.PokemonFavoritesViewModel
 
 @Composable
 fun NavigationGraph(navController: NavHostController) {
@@ -31,7 +34,12 @@ fun NavigationGraph(navController: NavHostController) {
         }
 
         composable(BottomNavItem.PokemonFavorite.route) {
-
+            val viewModel: PokemonFavoritesViewModel = hiltViewModel()
+            val state = viewModel.uiState.pokemons.collectAsStateWithLifecycle(emptyList())
+            PokemonFavoritesScreen(
+                pokemons = state.value,
+                navigateToDetailPokemon = {}
+            )
         }
 
         composable(

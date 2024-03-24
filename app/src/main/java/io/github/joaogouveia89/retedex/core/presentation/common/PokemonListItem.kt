@@ -1,4 +1,4 @@
-package io.github.joaogouveia89.retedex.pokemon.presentation.components
+package io.github.joaogouveia89.retedex.core.presentation.common
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -22,12 +22,11 @@ import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import io.github.joaogouveia89.retedex.R
 import io.github.joaogouveia89.retedex.core.domain.model.Pokemon
-import io.github.joaogouveia89.retedex.core.presentation.common.AsyncImageUrl
 import io.github.joaogouveia89.retedex.ui.theme.BluePrimary
 import io.github.joaogouveia89.retedex.ui.theme.black
 
 @Composable
-fun PokemonItem(
+fun PokemonListItem(
     modifier: Modifier = Modifier,
     pokemon: Pokemon,
     onClick: (pokemonId: Int) -> Unit
@@ -89,7 +88,7 @@ fun PokemonItem(
 @Preview
 @Composable
 fun PokemonItemPreview() {
-    PokemonItem(
+    PokemonListItem(
         pokemon = Pokemon(
             pokeId = 4,
             name = "Charmander",
