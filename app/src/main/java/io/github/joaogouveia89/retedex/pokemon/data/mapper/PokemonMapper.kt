@@ -4,7 +4,7 @@ import io.github.joaogouveia89.retedex.core.data.remote.model.PokemonResult
 import io.github.joaogouveia89.retedex.core.domain.model.Pokemon
 import io.github.joaogouveia89.retedex.core.util.ktx.capitalizeFirst
 
-fun List<PokemonResult>.asPokemonList() = map { it ->
+fun List<PokemonResult>.asPokemonList() = map {
 
     val pokeId = with(it.url.split("/")) {
         getOrNull(size - 2)

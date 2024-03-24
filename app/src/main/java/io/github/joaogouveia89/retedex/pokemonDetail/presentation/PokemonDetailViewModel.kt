@@ -27,7 +27,7 @@ class PokemonDetailViewModel @Inject constructor(
     private val addPokemonFavoriteUseCase: AddPokemonFavoriteUseCase,
     private val deletePokemonFavoriteUseCase: DeletePokemonFavoriteUseCase,
     private val isPokemonFavoriteUseCase: IsPokemonFavoriteUseCase,
-    private val savedStateHandle: SavedStateHandle
+    savedStateHandle: SavedStateHandle
 ) : ViewModel() {
     val uiState: StateFlow<PokemonDetailState>
         get() = _uiState

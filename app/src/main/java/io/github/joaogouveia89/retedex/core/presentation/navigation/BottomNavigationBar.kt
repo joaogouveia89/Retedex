@@ -1,4 +1,4 @@
-package br.com.movieapp.core.presentation.navigation
+package io.github.joaogouveia89.retedex.core.presentation.navigation
 
 import androidx.compose.material.BottomNavigation
 import androidx.compose.material.BottomNavigationItem

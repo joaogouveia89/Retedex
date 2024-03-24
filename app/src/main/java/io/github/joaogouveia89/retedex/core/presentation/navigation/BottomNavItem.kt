@@ -1,4 +1,4 @@
-package br.com.movieapp.core.presentation.navigation
+package io.github.joaogouveia89.retedex.core.presentation.navigation
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
@@ -11,13 +11,13 @@ sealed class BottomNavItem(
 ) {
 
     //ImageVector.vectorResource(R.drawable.ic_pikachu)
-    object Pokemon : BottomNavItem(
+    data object Pokemon : BottomNavItem(
         title = R.string.pokemon,
         icon = R.drawable.ic_pikachu,
         route = "pokemon_list_route"
     )
 
-    object PokemonFavorite : BottomNavItem(
+    data object PokemonFavorite : BottomNavItem(
         title = R.string.favorites,
         icon = R.drawable.ic_favorite,
         route = "pokemon_favorite_route"

@@ -1,3 +1,5 @@
+package io.github.joaogouveia89.retedex.core.presentation.navigation
+
 import androidx.compose.runtime.Composable
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -6,8 +8,6 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
-import br.com.movieapp.core.presentation.navigation.BottomNavItem
-import io.github.joaogouveia89.retedex.core.presentation.navigation.PokemonDetailsScreenNav
 import io.github.joaogouveia89.retedex.core.util.Constants.POKEMON_DETAIL_ARGUMENT_KEY
 import io.github.joaogouveia89.retedex.pokemon.presentation.PokemonScreen
 import io.github.joaogouveia89.retedex.pokemon.presentation.PokemonViewModel
