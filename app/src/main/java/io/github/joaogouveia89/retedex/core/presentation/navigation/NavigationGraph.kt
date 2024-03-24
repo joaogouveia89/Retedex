@@ -38,7 +38,9 @@ fun NavigationGraph(navController: NavHostController) {
             val state = viewModel.uiState.pokemons.collectAsStateWithLifecycle(emptyList())
             PokemonFavoritesScreen(
                 pokemons = state.value,
-                navigateToDetailPokemon = {}
+                navigateToDetailPokemon = {
+                    navController.navigate(PokemonDetailsScreenNav.DetailScreen.passPokemonId(it))
+                }
             )
         }
 
