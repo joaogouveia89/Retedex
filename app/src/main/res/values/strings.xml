@@ -13,4 +13,7 @@
     <string name="base_xp">"Base experience: %d"</string>
     <string name="favorite_pokemons">Favorites</string>
     <string name="favorite_pokemons_empty">You have no pokemons favorited</string>
+    <string name="retry">Retry</string>
+    <string name="error">Error</string>
+    <string name="check_internet_connection_error">Check your internet connection</string>
 </resources>

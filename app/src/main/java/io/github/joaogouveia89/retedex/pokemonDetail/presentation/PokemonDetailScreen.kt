@@ -40,7 +40,6 @@ import kotlinx.coroutines.flow.StateFlow
 @Composable
 fun PokemonDetailScreen(
     uiState: StateFlow<PokemonDetailState>,
-    navigateToPokemon: () -> Unit,
     onFavoriteStateChange: (Pokemon) -> Unit
 ) {
     val pokemonDetailState by uiState.collectAsState()
@@ -51,7 +50,7 @@ fun PokemonDetailScreen(
                 title = R.string.pokemon_details
             )
         }
-    ) { paddingValues ->
+    ) { _ ->
         val pokemonDetails = pokemonDetailState.pokemonDetails
 
         LazyColumn(

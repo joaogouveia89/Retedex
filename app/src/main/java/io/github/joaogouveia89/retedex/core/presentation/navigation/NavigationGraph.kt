@@ -58,9 +58,6 @@ fun NavigationGraph(navController: NavHostController) {
 
             PokemonDetailScreen(
                 uiState = uiState,
-                navigateToPokemon = {
-
-                },
                 onFavoriteStateChange = { pokemon ->
                     viewModel.addRemoveFavorite(pokemon)
                 }
