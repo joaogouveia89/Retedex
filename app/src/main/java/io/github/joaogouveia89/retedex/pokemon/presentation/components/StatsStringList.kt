@@ -35,7 +35,7 @@ fun statsStringList(
             fontSize = 20.sp
         )
     }
-    lazyListScope.items(list.size){
+    lazyListScope.items(list.size) {
         Row {
             Icon(
                 modifier = Modifier

@@ -43,12 +43,12 @@ fun PokemonsFavoritesContent(
                 modifier = Modifier
                     .align(Alignment.Center)
             )
-        }else{
+        } else {
             LazyColumn(
                 modifier = Modifier.fillMaxWidth(),
                 contentPadding = paddingValues
-            ){
-                items(pokemons.size){index ->
+            ) {
+                items(pokemons.size) { index ->
                     val pokemon = pokemons[index]
 
                     PokemonListItem(

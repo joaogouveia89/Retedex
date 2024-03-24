@@ -7,7 +7,7 @@ import javax.inject.Inject
 
 class PokemonDetailRemoteDataSourceImpl @Inject constructor(
     private val service: PokemonService
-): PokemonDetailRemoteDataSource {
+) : PokemonDetailRemoteDataSource {
     override suspend fun getPokemonDetail(pokeId: Int): PokemonDetailResponse =
         service.getPokemonDetail(pokeId)
 }

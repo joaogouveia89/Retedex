@@ -11,10 +11,10 @@ import javax.inject.Inject
 
 class AddPokemonFavoriteUseCaseImpl @Inject constructor(
     private val repository: PokemonFavoriteRepository
-): AddPokemonFavoriteUseCase {
+) : AddPokemonFavoriteUseCase {
     override suspend fun invoke(params: AddPokemonFavoriteUseCase.Params): Flow<ResultData<Unit>> =
-    flow{
-        val insert: Unit = repository.insert(params.pokemon)
-        emit(ResultData.Success(insert))
-    }.flowOn(Dispatchers.IO)
+        flow {
+            val insert: Unit = repository.insert(params.pokemon)
+            emit(ResultData.Success(insert))
+        }.flowOn(Dispatchers.IO)
 }

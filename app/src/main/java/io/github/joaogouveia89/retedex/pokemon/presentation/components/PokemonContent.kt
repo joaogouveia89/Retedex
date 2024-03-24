@@ -25,8 +25,8 @@ fun PokemonContent(
         LazyColumn(
             modifier = Modifier.fillMaxWidth(),
             contentPadding = paddingValues
-        ){
-            items(pagingPokemons.itemCount){index ->
+        ) {
+            items(pagingPokemons.itemCount) { index ->
                 val pokemonNullable = pagingPokemons[index]
 
                 pokemonNullable?.let { pokemon ->

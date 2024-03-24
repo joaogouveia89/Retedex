@@ -3,19 +3,14 @@ package io.github.joaogouveia89.retedex.pokemonDetail.presentation
 import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ChevronRight
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -63,7 +58,7 @@ fun PokemonDetailScreen(
             modifier = Modifier
                 .fillMaxWidth()
         ) {
-            item{
+            item {
                 AsyncImage(
                     model = ImageRequest.Builder(LocalContext.current)
                         .data(pokemonDetails.backdropImageUrl)
@@ -100,13 +95,13 @@ fun PokemonDetailScreen(
                         Icon(
                             imageVector = Icons.Default.Favorite,
                             contentDescription = null,
-                            tint = if(pokemonDetails.isFavorite) Color.Red else Color.Black
+                            tint = if (pokemonDetails.isFavorite) Color.Red else Color.Black
                         )
                     }
                 }
             }
 
-            item{
+            item {
                 Text(
                     modifier = Modifier
                         .padding(8.dp),
@@ -118,7 +113,7 @@ fun PokemonDetailScreen(
                 )
             }
 
-            item{
+            item {
                 Text(
                     modifier = Modifier
                         .padding(8.dp),
@@ -138,7 +133,10 @@ fun PokemonDetailScreen(
                 ) {
                     Text(
                         modifier = Modifier.padding(start = 8.dp),
-                        text = stringResource(id = R.string.pokemon_details_weight, pokemonDetails.weightInGrams),
+                        text = stringResource(
+                            id = R.string.pokemon_details_weight,
+                            pokemonDetails.weightInGrams
+                        ),
                         color = black,
                         fontFamily = FontFamily.SansSerif,
                         fontWeight = FontWeight.Medium,
@@ -152,7 +150,10 @@ fun PokemonDetailScreen(
                     ) {
                         Text(
                             modifier = Modifier.padding(start = 8.dp),
-                            text = stringResource(id = R.string.pokemon_details_height, pokemonDetails.heightInMeters),
+                            text = stringResource(
+                                id = R.string.pokemon_details_height,
+                                pokemonDetails.heightInMeters
+                            ),
                             color = black,
                             fontFamily = FontFamily.SansSerif,
                             fontWeight = FontWeight.Medium,

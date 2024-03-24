@@ -11,7 +11,7 @@ import javax.inject.Inject
 
 class IsPokemonFavoriteUseCaseImpl @Inject constructor(
     private val repository: PokemonFavoriteRepository
-): IsPokemonFavoriteUseCase {
+) : IsPokemonFavoriteUseCase {
     override suspend fun invoke(params: IsPokemonFavoriteUseCase.Params): Flow<ResultData<Boolean>> =
         flow {
             val isFavorite: Boolean = repository.isFavorite(pokeId = params.pokeId)

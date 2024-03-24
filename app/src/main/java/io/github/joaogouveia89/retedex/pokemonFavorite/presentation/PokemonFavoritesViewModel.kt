@@ -24,7 +24,7 @@ class PokemonFavoritesViewModel @Inject constructor(
 
     private fun fetch() {
         viewModelScope.launch {
-            val pokemons =  getPokemonsFavoriteUseCase.invoke()
+            val pokemons = getPokemonsFavoriteUseCase.invoke()
             uiState = uiState.copy(pokemons = pokemons)
         }
     }

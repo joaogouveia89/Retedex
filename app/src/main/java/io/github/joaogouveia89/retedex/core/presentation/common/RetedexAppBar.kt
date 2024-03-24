@@ -9,7 +9,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import io.github.joaogouveia89.retedex.ui.theme.BluePrimary
 import io.github.joaogouveia89.retedex.ui.theme.YellowPrimary
-import io.github.joaogouveia89.retedex.ui.theme.white
 
 @Composable
 fun RetedexAppBar(

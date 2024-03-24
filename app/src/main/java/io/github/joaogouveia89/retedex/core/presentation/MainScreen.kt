@@ -1,7 +1,6 @@
 package io.github.joaogouveia89.retedex.core.presentation
 
 import NavigationGraph
-import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Scaffold
@@ -11,7 +10,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import br.com.movieapp.core.presentation.navigation.BottomNavigationBar
-import br.com.movieapp.core.presentation.navigation.currentRoute
 
 @Composable
 fun MainScreen(navController: NavHostController) {

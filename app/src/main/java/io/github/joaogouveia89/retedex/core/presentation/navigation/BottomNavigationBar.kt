@@ -47,7 +47,7 @@ fun BottomNavigationBar(
                 },
                 icon = {
                     Icon(
-                        imageVector = ImageVector.vectorResource(destination.icon) ,
+                        imageVector = ImageVector.vectorResource(destination.icon),
                         contentDescription = null
                     )
                 },

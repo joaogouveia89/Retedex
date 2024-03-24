@@ -28,7 +28,7 @@ class PokemonDetailViewModel @Inject constructor(
     private val deletePokemonFavoriteUseCase: DeletePokemonFavoriteUseCase,
     private val isPokemonFavoriteUseCase: IsPokemonFavoriteUseCase,
     private val savedStateHandle: SavedStateHandle
-): ViewModel() {
+) : ViewModel() {
     val uiState: StateFlow<PokemonDetailState>
         get() = _uiState
 
@@ -51,10 +51,10 @@ class PokemonDetailViewModel @Inject constructor(
         event(event)
     }
 
-    fun addRemoveFavorite(pokemon: Pokemon){
-        if(uiState.value.pokemonDetails.isFavorite){
+    fun addRemoveFavorite(pokemon: Pokemon) {
+        if (uiState.value.pokemonDetails.isFavorite) {
             event(PokemonDetailEvent.RemoveFavorite(pokemon))
-        }else{
+        } else {
             event(PokemonDetailEvent.AddFavorite(pokemon))
         }
     }
@@ -158,7 +158,8 @@ class PokemonDetailViewModel @Inject constructor(
                                         it.copy(
                                             pokemonDetails = resultData.data.apply {
                                                 // to ensure to get the state favorite state instead of the default one which is always false
-                                                resultData.data.isFavorite = it.pokemonDetails.isFavorite
+                                                resultData.data.isFavorite =
+                                                    it.pokemonDetails.isFavorite
                                             },
                                             isLoading = false,
                                             error = null

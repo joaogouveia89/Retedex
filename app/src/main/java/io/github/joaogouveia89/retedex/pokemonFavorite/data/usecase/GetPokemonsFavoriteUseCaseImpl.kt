@@ -8,7 +8,7 @@ import javax.inject.Inject
 
 class GetPokemonsFavoriteUseCaseImpl @Inject constructor(
     private val repository: PokemonFavoriteRepository
-): GetPokemonsFavoriteUseCase {
+) : GetPokemonsFavoriteUseCase {
     override suspend fun invoke(): Flow<List<Pokemon>> =
         repository.getPokemons()
 }

@@ -11,7 +11,7 @@ import javax.inject.Inject
 
 class PokemonFavoriteLocalDataSourceImpl @Inject constructor(
     private val dao: PokemonDao
-): PokemonFavoriteLocalDataSource {
+) : PokemonFavoriteLocalDataSource {
     override fun getPokemons(): Flow<List<Pokemon>> =
         dao.getPokemons().map { it.toPokemons() }
 

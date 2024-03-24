@@ -8,7 +8,7 @@ import javax.inject.Inject
 
 class PokemonFavoriteRepositoryImpl @Inject constructor(
     private val localDataSource: PokemonFavoriteLocalDataSource
-): PokemonFavoriteRepository {
+) : PokemonFavoriteRepository {
     override fun getPokemons(): Flow<List<Pokemon>> =
         localDataSource.getPokemons()
 

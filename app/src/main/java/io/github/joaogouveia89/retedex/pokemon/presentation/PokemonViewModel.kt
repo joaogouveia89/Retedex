@@ -12,11 +12,10 @@ import io.github.joaogouveia89.retedex.pokemon.presentation.state.PokemonsState
 import javax.inject.Inject
 
 
-
 @HiltViewModel
 class PokemonViewModel @Inject constructor(
     getPokemonsUseCase: GetPokemonsUseCase
-) : ViewModel(){
+) : ViewModel() {
     var uiState by mutableStateOf(PokemonsState())
         private set
 

@@ -4,12 +4,12 @@ import io.github.joaogouveia89.retedex.core.data.local.entities.PokemonEntity
 import io.github.joaogouveia89.retedex.core.domain.model.Pokemon
 
 fun List<PokemonEntity>.toPokemons() = map { pokeEntity ->
-        Pokemon(
-            name = pokeEntity.name,
-            pokeId = pokeEntity.pokeId,
-            spriteUrl = pokeEntity.spriteUrl
-        )
-    }
+    Pokemon(
+        name = pokeEntity.name,
+        pokeId = pokeEntity.pokeId,
+        spriteUrl = pokeEntity.spriteUrl
+    )
+}
 
 fun Pokemon.toPokemonEntity() =
     PokemonEntity(
