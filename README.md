@@ -1,7 +1,8 @@
 # Retedex - A Pokédex Application
 
-Retedex is a Pokédex application developed for the Android platform, designed to consume data from the [PokeAPI](https://pokeapi.co/). It leverages modern Android development techniques and architectural patterns to provide a smooth and intuitive user experience.
+Retedex, a portmanteau of "Retech" and "Pokedex," is a Pokédex application developed for the Android platform. It is designed to consume data from the PokeAPI. Retedex leverages modern Android development techniques and architectural patterns to provide a smooth and intuitive user experience.
 
+![Screenshot of Retedex](Screenshot_20240324-134210.png)
 ## Approach
 
 Retedex follows a clean architecture approach, utilizing Hilt for dependency injection and MVVM (Model-View-ViewModel) for the architectural pattern. The application is designed to be modular and maintainable, with a clear separation of concerns.
