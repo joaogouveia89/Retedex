@@ -1,11 +1,13 @@
 package io.github.joaogouveia89.retedex.pokemonDetail.data.mapper
 
 import io.github.joaogouveia89.retedex.core.data.remote.response.PokemonDetailResponse
+import io.github.joaogouveia89.retedex.core.domain.model.Pokemon
 import io.github.joaogouveia89.retedex.core.domain.model.PokemonDetail
 import io.github.joaogouveia89.retedex.core.util.ktx.capitalizeFirst
 
 fun PokemonDetailResponse.asPokemonDetail() =
     PokemonDetail(
+        pokeId = this.id,
         name = this.name.capitalizeFirst(),
         backdropImageUrl = this
             .sprites
@@ -18,4 +20,10 @@ fun PokemonDetailResponse.asPokemonDetail() =
         abilities = this.abilities.map { it.ability.name.capitalizeFirst() },
         moves = this.moves.map { it.move.name.capitalizeFirst() },
         baseXp = this.baseExperience
+    )
+
+fun PokemonDetail.asPokemon() =
+    Pokemon(
+        pokeId = pokeId,
+        name = name
     )

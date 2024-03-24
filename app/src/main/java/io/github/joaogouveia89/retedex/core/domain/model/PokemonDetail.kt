@@ -1,6 +1,7 @@
 package io.github.joaogouveia89.retedex.core.domain.model
 
 data class PokemonDetail(
+    val pokeId: Int = 0,
     val name: String = "",
     val backdropImageUrl: String? = null,
     val heightInMeters: Double = 0.0,
@@ -8,5 +9,6 @@ data class PokemonDetail(
     val types: List<String> = listOf(),
     val weightInGrams: Int = 0,
     val abilities: List<String> = listOf(),
-    val moves: List<String> = listOf()
+    val moves: List<String> = listOf(),
+    var isFavorite: Boolean = false
 )

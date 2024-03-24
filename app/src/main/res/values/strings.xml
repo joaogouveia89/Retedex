@@ -11,4 +11,6 @@
     <string name="abilities">Abilities:</string>
     <string name="moves">"Moves: "</string>
     <string name="base_xp">"Base experience: %d"</string>
+    <string name="favorite_pokemons">Favorites</string>
+    <string name="favorite_pokemons_empty">You have no pokemons favorited</string>
 </resources>

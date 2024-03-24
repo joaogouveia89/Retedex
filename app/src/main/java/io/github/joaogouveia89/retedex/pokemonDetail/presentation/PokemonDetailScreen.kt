@@ -33,8 +33,10 @@ import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import io.github.joaogouveia89.retedex.R
+import io.github.joaogouveia89.retedex.core.domain.model.Pokemon
 import io.github.joaogouveia89.retedex.core.presentation.common.RetedexAppBar
 import io.github.joaogouveia89.retedex.pokemon.presentation.components.statsStringList
+import io.github.joaogouveia89.retedex.pokemonDetail.data.mapper.asPokemon
 import io.github.joaogouveia89.retedex.pokemonDetail.presentation.state.PokemonDetailState
 import io.github.joaogouveia89.retedex.ui.theme.black
 import kotlinx.coroutines.flow.StateFlow
@@ -43,7 +45,8 @@ import kotlinx.coroutines.flow.StateFlow
 @Composable
 fun PokemonDetailScreen(
     uiState: StateFlow<PokemonDetailState>,
-    navigateToPokemon: () -> Unit
+    navigateToPokemon: () -> Unit,
+    onFavoriteStateChange: (Pokemon) -> Unit
 ) {
     val pokemonDetailState by uiState.collectAsState()
 
@@ -90,12 +93,14 @@ fun PokemonDetailScreen(
                     IconButton(
                         modifier = Modifier
                             .align(Alignment.CenterVertically),
-                        onClick = {}
+                        onClick = {
+                            onFavoriteStateChange(pokemonDetails.asPokemon())
+                        }
                     ) {
                         Icon(
                             imageVector = Icons.Default.Favorite,
                             contentDescription = null,
-                            tint = Color.Black
+                            tint = if(pokemonDetails.isFavorite) Color.Red else Color.Black
                         )
                     }
                 }

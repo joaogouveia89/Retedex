@@ -14,7 +14,6 @@ fun List<PokemonResult>.asPokemonList() = map { it ->
 
     Pokemon(
         name = it.name.capitalizeFirst(),
-        spriteUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/$pokeId.png",
         pokeId = pokeId
     )
 }
