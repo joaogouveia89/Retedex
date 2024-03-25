@@ -7,7 +7,7 @@
     <string name="pokemon">Pokemons</string>
     <string name="pokemon_details">Pokemon Details</string>
     <string name="pokemon_details_height">Height: %.2f m</string>
-    <string name="pokemon_details_weight">Weight: %d g</string>
+    <string name="pokemon_details_weight">Weight: %s</string>
     <string name="abilities">Abilities:</string>
     <string name="moves">"Moves: "</string>
     <string name="base_xp">"Base experience: %d"</string>

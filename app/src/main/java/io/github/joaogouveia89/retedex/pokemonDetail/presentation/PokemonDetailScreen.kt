@@ -30,6 +30,7 @@ import coil.request.ImageRequest
 import io.github.joaogouveia89.retedex.R
 import io.github.joaogouveia89.retedex.core.domain.model.Pokemon
 import io.github.joaogouveia89.retedex.core.presentation.common.RetedexAppBar
+import io.github.joaogouveia89.retedex.core.util.ktx.toWeightString
 import io.github.joaogouveia89.retedex.pokemon.presentation.components.statsStringList
 import io.github.joaogouveia89.retedex.pokemonDetail.data.mapper.asPokemon
 import io.github.joaogouveia89.retedex.pokemonDetail.presentation.state.PokemonDetailState
@@ -134,7 +135,7 @@ fun PokemonDetailScreen(
                         modifier = Modifier.padding(start = 8.dp),
                         text = stringResource(
                             id = R.string.pokemon_details_weight,
-                            pokemonDetails.weightInGrams
+                            pokemonDetails.weightInGrams.toWeightString()
                         ),
                         color = black,
                         fontFamily = FontFamily.SansSerif,
