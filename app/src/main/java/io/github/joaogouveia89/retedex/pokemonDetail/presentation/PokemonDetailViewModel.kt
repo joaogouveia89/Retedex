@@ -80,7 +80,7 @@ class PokemonDetailViewModel @Inject constructor(
                             is ResultData.Failure -> {
                                 UtilFunctions.logError(
                                     "DETAIL",
-                                    "Erro ao cadastrar filme nos favoritos"
+                                    "Fail to register the pokemon in favorites"
                                 )
                             }
 
@@ -109,7 +109,7 @@ class PokemonDetailViewModel @Inject constructor(
                             is ResultData.Failure -> {
                                 UtilFunctions.logError(
                                     "DETAIL",
-                                    "Erro ao atualizar filme nos favoritos"
+                                    "Fail to register the pokemon in favorites"
                                 )
                             }
 
@@ -138,7 +138,7 @@ class PokemonDetailViewModel @Inject constructor(
                             is ResultData.Failure -> {
                                 UtilFunctions.logError(
                                     "DETAIL",
-                                    "Erro ao remover filme nos favoritos"
+                                    "Fail to register the pokemon in favorites"
                                 )
                             }
 
